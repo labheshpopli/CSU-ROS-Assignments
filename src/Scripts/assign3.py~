@@ -18,7 +18,7 @@ if __name__ == '__main__':
 	pubrunner = rospy.Publisher('/runner/cmd_vel', Twist, queue_size = 10)
         rospy.Subscriber("/turtle1/pose", Pose, hunterPose)
 
-#rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped '{header: {stamp: now, frame_id: "map"}, pose: {position: {x: 1.0, y: 0.0, z: 0.0}, orientation: {w: 1.0}}}'
+rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped '{header: {stamp: now, frame_id: "map"}, pose: {position: {x: 1.0, y: 0.0, z: 0.0}, orientation: {w: 1.0}}}'
 
 
     except rospy.ROSInterruptException:
